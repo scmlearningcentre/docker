@@ -1,0 +1,13 @@
+version: '3'
+services:
+ testservice:
+  build: 
+    context: ./myapache
+    dockerfile: dockerfile.apache
+  container_name: myapachecont
+  image: myapache
+  ports: 
+    - 80:80
+  restart: always
+  volumes:
+    - /var/www:/var/www
